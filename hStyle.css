@@ -1,0 +1,30 @@
+.navBar {
+    background-color: #00b4d8;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.navDiv {
+    display: flex;
+    align-items: Center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoImg {
+    /* border: solid green; */
+    border-radius: 20%;
+    padding: 1em;
+    max-height: 80px;
+    max-width: 80px;
+    margin-right: 1em;
+}
