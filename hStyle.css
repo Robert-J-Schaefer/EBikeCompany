@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     min-height: 100vh;
-    background-image: url("outside.jpeg"); 
+    background-image: url("outside.jpeg");
     background-color: chocolate;
     background-size: cover;
     background-repeat: no-repeat;
@@ -13,12 +13,12 @@ body{
     font-family: Verdana;
 }
 
-nav{
+nav {
     background-color: white;
-    box-shadow: 3 px 3 px 5px rgba(0, 0 , 0, 0.5);
+    box-shadow: 3 px 3 px 5px rgba(0, 0, 0, 0.5);
 }
 
-nav ul{
+nav ul {
     width: 100%;
     list-style: none;
     display: flex;
@@ -26,11 +26,11 @@ nav ul{
     align-items: center;
 }
 
-nav li{
+nav li {
     height: 50px;
 }
 
-nav a{
+nav a {
     height: 100%;
     padding: 0 30px;
     text-decoration: none;
@@ -39,15 +39,15 @@ nav a{
     color: black;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: darkgray;
 }
 
-nav li:first-child{
+nav li:first-child {
     margin-right: auto;
 }
 
-.sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     right: 0;
@@ -63,38 +63,39 @@ nav li:first-child{
     justify-content: flex-start;
 }
 
-.sidebar li{
+.sidebar li {
     width: 100%;
 }
 
-.sidebar a{
+.sidebar a {
     width: 100%;
 }
 
-.menuButton{
+.menuButton {
     display: none;
 }
 
-@media(max-width: 800px){
-    .hideOnMobile{
+@media(max-width: 800px) {
+    .hideOnMobile {
         display: none;
     }
-    .menuButton{
+
+    .menuButton {
         display: block;
     }
 }
 
-@media(max-width: 400px){
-    .sidebar{
+@media(max-width: 400px) {
+    .sidebar {
         width: 100%;
     }
 }
 
-.submitButton{
+.submitButton {
     margin-top: 10em;
 }
 
-button{
+button {
     padding: 1em 2em;
     background-color: black;
     border: none;
@@ -107,11 +108,37 @@ button{
     align-items: center;
 }
 
-button::after{
-    content:'';
-    position: absolute;
-    height: 100%;
-    width: 100%;
+.submitButton {
+    margin-top: 10em;
+    background-color: black;
+    height: fit-content;
+    width: fit-content;
+}
+
+button {
+    padding: 1em 2em;
+    background-color: #606c38;
+    border: none;
+    color: white;
     border-radius: 1000px;
-    background-image: linear-gradient(to bottom right, gree );
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    height: 107%;
+    width: 102%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, #606c38, #dda15e);
+    z-index: -1;
+}
+
+button:hover {
+    z-index: 0;
+    box-shadow: 40px 0 100px #242915, -40px 0 100px #3b2c1a;
 }
