@@ -89,3 +89,29 @@ nav li:first-child{
         width: 100%;
     }
 }
+
+.submitButton{
+    margin-top: 10em;
+}
+
+button{
+    padding: 1em 2em;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 1000px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button::after{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to bottom right, gree );
+}
