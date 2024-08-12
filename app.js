@@ -22,7 +22,7 @@ let lastY = o;
 
 //is run when user clicks inside of canvas
 canvas.addEventListener('mousedown', (event) =>{
-    isDrawing = true;
+    isDraw = true;
     const {offsetX, offsetY} = event;
     lastX = offsetX;
     lastY= offsetY;
@@ -30,22 +30,25 @@ canvas.addEventListener('mousedown', (event) =>{
 //is run when the user stops clicking inside of canvs 
 canvas.addEventListener('mousemove' , (event) => {
     const{offsetX, offsetY} = event;
-    if(isDrawing){
+    if(isDraw){
         canvasCtx.beginPath();
         canvasCtx.moveTo(lastX, lastY);
-        canvasCtx.lineTo(offsetx, offsetY);
+        canvasCtx.lineTo(offsetX, offsetY);
+        canvasCtx.stroke();
         lastX =offsetX;
         lastY = offsetY;
     }
 })
 //run when user starts moving inside of canvas
 canvas.addEventListener('mouseup' , (event) => {
-    isDrawing = false;
+    isDraw = false;
 })
 //run when users mouse leaves canvas
 canvas.addEventListener('mouseleave' , (event) => {
-    isDrawing = false;
+    isDraw = false;
 })
+
+
 function showSideBar() {
     const sideBar = document.querySelector('.sidebar');
     sideBar.style.display = 'flex';
